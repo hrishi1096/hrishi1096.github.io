@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html>
-<body>
 
-<script type="text/javascript">
-  (function() {
-  window.onresize = displayWindowSize;
-  window.onload = displayWindowSize;
+<div id="screensize_detector"></div>
 
-  function displayWindowSize() {
-    let myWidth = window.innerWidth;
-    let myHeight = window.innerHeight;
-    // your size calculation code here
-    document.getElementById("screen").innerHTML = myWidth + "x" + myHeight;
-    console.log("Window resized, current size: %s x %s", myWidth, myHeight);
-  };
-})();
+<script>
+window.addEventListener("load", function(){
+    document.getElementById("screensize_detector").innerHTML = window.innerWidth + "x" + window.innerHeight;
+    console.log(window.innerWidth + "x" + window.innerHeight);
+});
+window.addEventListener('resize', function(){
+    document.getElementById("screensize_detector").innerHTML = window.innerWidth + "x" + window.innerHeight;
+    console.log(window.innerWidth + "x" + window.innerHeight);
+});
 </script>
 
-<div id="screen"></div>
-
-</body>
-</html>
