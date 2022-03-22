@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript">
+  (function() {
+  window.onresize = displayWindowSize;
+  window.onload = displayWindowSize;
+
+  function displayWindowSize() {
+    let myWidth = window.innerWidth;
+    let myHeight = window.innerHeight;
+    // your size calculation code here
+    document.getElementById("screen").innerHTML = myWidth + "x" + myHeight;
+    res = myWidth + "x" + myHeight
+    console.log(res);
+  };
+})();
+</script>
+
+<div id="screen"></div>
+
+</body>
+</html>
